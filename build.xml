@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<project name="prestacao_de_campanhas_eleitorais" basedir="." default="compile">
+   
+	 
+	<property name="src" location="${basedir}/src"/>
+	<property name="build" location="${basedir}/build/classes"/>
+	<property name="libs" location="${basedir}/lib"/>
+	
+	
+	<path id="project">
+	    <fileset dir="${basedir}/lib">
+	        <include name="**/*.jar" />
+	    </fileset>
+	</path>
+	
+	<target name="init">
+		<mkdir dir="${build}/"/>
+	</target>
+	
+	<target name="clean">
+			<delete dir="${build}"/>
+	</target>
+	<target name="compile" depends="clean, init">
+			<javac srcdir="${src}" destdir="${build}"
+				sourcepath="${basedir}/src">
+				<classpath>
+					<fileset dir="${basedir}/lib" >
+    					<include name="**/*.jar"/>
+					</fileset>
+					
+				</classpath>				
+			</javac>
+		
+	</target>
+		<echo>fimm</echo>
+	
+</project>

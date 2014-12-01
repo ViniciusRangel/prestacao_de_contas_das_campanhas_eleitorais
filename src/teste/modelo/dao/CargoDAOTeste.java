@@ -88,7 +88,7 @@ public class CargoDAOTeste extends TemplateTeste {
 		
 		Cargo c3 = new Cargo();
 		c3.setCodigo(3);
-		c3.setDescricao("CARGO TRÊS");
+		c3.setDescricao("CARGO TRES");
 		listaCargos.add(c3);
 		
 		this.cargoDAO.cadastrarLista(listaCargos);
