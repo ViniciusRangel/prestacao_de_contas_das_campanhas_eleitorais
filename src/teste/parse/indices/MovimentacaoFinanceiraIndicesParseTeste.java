@@ -11,7 +11,7 @@ import parse.indices.MovimentacaoFinanceiraIndicesParse;
 public class MovimentacaoFinanceiraIndicesParseTeste {
 
 	private String campo[];
-	private MovimentacaoFinanceiraIndicesParse movimentacaoFinanceiraIndicesParse;
+	private MovimentacaoFinanceiraIndicesParse<Object> movimentacaoFinanceiraIndicesParse;
 	private String ano = "2006";
 	private String anoTeste = "2010";
 

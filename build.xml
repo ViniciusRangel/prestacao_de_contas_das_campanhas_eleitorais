@@ -1,38 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	
-<project name="prestacao_de_campanhas_eleitorais" basedir="." default="compile">
-   
-	 
-	<property name="src" location="${basedir}/src"/>
-	<property name="build" location="${basedir}/build/classes"/>
-	<property name="libs" location="${basedir}/lib"/>
-	
-	
-	<path id="project">
-	    <fileset dir="${basedir}/lib">
-	        <include name="**/*.jar" />
-	    </fileset>
+<project name="prestacao_de_campanhas_eleitorais" basedir="." default="test">
+
+	<property name="src" location="${basedir}/src" />
+	<property name="build" location="${basedir}/build/classes" />
+	<property name="libs" location="${basedir}/lib" />
+	<property name="teste" location="${basedir}/build/classes" />
+	<property name="report" location="$" />
+
+	<path id="project.classpath" path=".">
+
+		<fileset dir="${basedir}/lib">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement location="${basedir}/build/classes/testes"/>
 	</path>
-	
+
 	<target name="init">
-		<mkdir dir="${build}/"/>
+		<mkdir dir="${build}/" />
+		<mkdir dir="${report}" />
 	</target>
-	
+
 	<target name="clean">
-			<delete dir="${build}"/>
+		<delete dir="${build}" />
 	</target>
 	<target name="compile" depends="clean, init">
-			<javac srcdir="${src}" destdir="${build}"
-				sourcepath="${basedir}/src">
-				<classpath>
-					<fileset dir="${basedir}/lib" >
-    					<include name="**/*.jar"/>
-					</fileset>
-					
-				</classpath>				
-			</javac>
-		
+		<javac srcdir="${src}" destdir="${build}" sourcepath="${basedir}/src" includeantruntime="true" debug="true">
+			<classpath>
+				<fileset dir="${basedir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
 	</target>
-		<echo>fimm</echo>
-	
+
+	<target name="test" depends="compile">
+		<junit fork="yes" forkmode="once" printsummary="true" showoutput="true" 
+			failureproperty="failed-test" haltonfailure="false">
+
+			<formatter type="plain" usefile="false" />
+
+			<classpath location="${teste}" />
+			<classpath refid="project.classpath" />
+
+			<batchtest fork="yes" todir="${report}">
+				<fileset dir="${teste}">
+					<include name="**/*Teste.class" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
 </project>
