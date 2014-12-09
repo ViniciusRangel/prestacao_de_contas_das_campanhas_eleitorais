@@ -1,7 +1,7 @@
 package teste.modelo.bean;
 
-import static teste.modelo.bean.BeanTeste.instanciarDoador;
-import static teste.modelo.bean.BeanTeste.instanciarMovimentacaoFinanceira;
+import static teste.modelo.bean.Bean.instanciarDoador;
+import static teste.modelo.bean.Bean.instanciarMovimentacaoFinanceira;
 import modelo.beans.Doador;
 import modelo.beans.MovimentacaoFinanceira;
 
@@ -23,7 +23,7 @@ public class DoadorTeste {
 		
 		Doador doador = instanciarDoador();
 		Doador doador2 = instanciarDoador();
-		doador.setCpf_cnpj(BeanTeste.STRING_TESTE_2);
+		doador.setCpf_cnpj(Bean.STRING_TESTE_2);
 		Assert.assertFalse(doador.equals(doador2));		
 	}
 	
@@ -35,9 +35,9 @@ public class DoadorTeste {
 		
 		Assert.assertFalse(doador.equals(movimentacaoFinanceira));
 		Assert.assertFalse(movimentacaoFinanceira.equals(doador));
-		Assert.assertEquals(BeanTeste.STRING_TESTE,doador.getNome());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,doador.getUf());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,doador.getSituacaoCadastral());
+		Assert.assertEquals(Bean.STRING_TESTE,doador.getNome());
+		Assert.assertEquals(Bean.STRING_TESTE,doador.getUf());
+		Assert.assertEquals(Bean.STRING_TESTE,doador.getSituacaoCadastral());
 	}
 	
 }

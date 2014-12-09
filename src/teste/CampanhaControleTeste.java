@@ -16,7 +16,7 @@ import org.junit.Test;
 
 import controle.CampanhaControle;
 
-public class CampanhaControleTeste extends TemplateTeste {
+public class CampanhaControleTeste extends Template {
 	
 	private CampanhaDAO campanhaDAO;
 	private CandidatoDAO candidatoDAO;

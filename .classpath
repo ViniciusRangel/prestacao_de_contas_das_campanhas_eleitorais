@@ -15,16 +15,17 @@
 	<classpathentry exported="true" kind="lib" path="lib/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/vinicius/Downloads/javax.servlet-3.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/mysql-connector-java-5.1.22.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/selenium-2.42.2/selenium-java-2.42.2-srcs.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/selenium-2.42.2/selenium-java-2.42.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/servlet-api-2.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="/usr/local/apache-ant-1.9.4/lib/ant.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/activation-1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/ant-junit-1.8.2.jar"/>
 	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/rt.jar"/>
 	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/junit.jar"/>
 	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/org.hamcrest.core_1.3.0.v201303031735.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/httpcore-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/httpclient-4.3.2.jar"/>
+	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/selenium-server-standalone-2.43.0.jar"/>
+	<classpathentry kind="lib" path="/home/vinicius/workspace/prestacao_de_contas_das_campanhas_eleitorais/lib/selenium-server-2.43.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

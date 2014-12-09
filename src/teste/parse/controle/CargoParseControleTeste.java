@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import parse.controle.CargoParseControle;
 import parse.indices.CargoIndicesParse;
-import teste.TemplateTeste;
+import teste.Template;
 
-public class CargoParseControleTeste extends TemplateTeste {
+public class CargoParseControleTeste extends Template {
 
 	public static final int CODIGO = 0;
 	public static final int DESCRICAO = 1;

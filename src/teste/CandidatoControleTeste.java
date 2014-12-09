@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import controle.CandidatoControle;
 
-public class CandidatoControleTeste extends TemplateTeste {
+public class CandidatoControleTeste extends Template {
 
 	private CandidatoDAO candidatoDAO;
 	private CandidatoControle candidatoControle;

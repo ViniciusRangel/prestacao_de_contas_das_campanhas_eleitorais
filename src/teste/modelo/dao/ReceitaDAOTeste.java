@@ -11,9 +11,9 @@ import modelo.dao.ReceitaDAO;
 
 import org.junit.Test;
 
-import teste.TemplateTeste;
+import teste.Template;
 
-public class ReceitaDAOTeste extends TemplateTeste {
+public class ReceitaDAOTeste extends Template {
 	
 	private ReceitaDAO receitaDAO;
 	private Receita receita1;

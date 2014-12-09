@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import parse.controle.ReceitaParseControle;
 import parse.indices.ReceitaIndicesParse;
-import teste.TemplateTeste;
+import teste.Template;
 
-public class ReceitaParseControleTeste extends TemplateTeste {
+public class ReceitaParseControleTeste extends Template {
 	
 	public static final int RECIBO = 0;
 	public static final int NOME = 1;

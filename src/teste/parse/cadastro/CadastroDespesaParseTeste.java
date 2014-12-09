@@ -12,9 +12,9 @@ import org.junit.Test;
 
 import parse.ParseException;
 import parse.cadastro.receita_despesa.CadastroDespesaParse;
-import teste.TemplateTeste;
+import teste.Template;
 
-public class CadastroDespesaParseTeste extends TemplateTeste {
+public class CadastroDespesaParseTeste extends Template {
 
 	private CadastroDespesaParse cadastro1;
 	private CadastroDespesaParse cadastro2;

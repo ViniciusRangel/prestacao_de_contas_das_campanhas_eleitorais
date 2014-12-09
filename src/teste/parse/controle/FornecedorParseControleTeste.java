@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import parse.controle.FornecedorParseControle;
 import parse.indices.FornecedorIndicesParse;
-import teste.TemplateTeste;
+import teste.Template;
 
-public class FornecedorParseControleTeste extends TemplateTeste {
+public class FornecedorParseControleTeste extends Template {
 	
 	public static final int CPF_CNPJ = 0;
 	public static final int NOME = 1;

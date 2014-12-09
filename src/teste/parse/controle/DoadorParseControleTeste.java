@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import parse.controle.DoadorParseControle;
 import parse.indices.DoadorIndicesParse;
-import teste.TemplateTeste;
+import teste.Template;
 
-public class DoadorParseControleTeste extends TemplateTeste {
+public class DoadorParseControleTeste extends Template {
 
 	public static final int CPF_CNPJ = 0;
 	public static final int NOME = 1;

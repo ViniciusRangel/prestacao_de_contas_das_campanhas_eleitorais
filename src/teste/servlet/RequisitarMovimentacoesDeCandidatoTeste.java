@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.junit.Test;
 
-import teste.TemplateTeste;
+import teste.Template;
 import controle.servlet.RequisitarMovimentacoesDeCandidato;
 
-public class RequisitarMovimentacoesDeCandidatoTeste extends TemplateTeste {
+public class RequisitarMovimentacoesDeCandidatoTeste extends Template {
 	
 	RequisitarMovimentacoesDeCandidato requisitarMovimentacoesDeCandidato;
 	HttpServletRequest req;

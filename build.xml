@@ -1,17 +1,17 @@
-<project name="prestacao_de_campanhas_eleitorais" basedir="." default="test">
+<project name="prestacao_de_campanhas_eleitorais" basedir="." default="00-GenerateReport">
 
 	<property name="src" location="${basedir}/src" />
 	<property name="build" location="${basedir}/build/classes" />
 	<property name="libs" location="${basedir}/lib" />
 	<property name="teste" location="${basedir}/build/classes" />
-	<property name="report" location="$" />
-
+	<property name="report" location="${basedir}/report" />
+	
 	<path id="project.classpath" path=".">
 
 		<fileset dir="${basedir}/lib">
 			<include name="*.jar" />
 		</fileset>
-		<pathelement location="${basedir}/build/classes/testes"/>
+		<pathelement location="${basedir}/build/classes"/>
 	</path>
 
 	<target name="init">
@@ -31,22 +31,68 @@
 			</classpath>
 		</javac>
 	</target>
+	
+	<!-- Emma source code -->
+	<property name="emma.bin.dir" value="emma/bin" />
+	<property name="emma.metadate.dir" value="emma/metadate" />
+	<property name="emma.report.dir" value="emma/report" />
+	
+	<!-- Emma task definitions that you will find inside the jar -->
+	<taskdef resource="emma_ant.properties">
+		<classpath refid="project.classpath" />
+	</taskdef>
+		
+	<!-- Generate the Emma  -->
+	<target name="03-Instrumentation" depends="compile">
+		<emma>
+			<instr instrpath="${teste}" destdir="${emma.bin.dir}" 
+				metadatafile="${emma.metadate.dir}/metadate.emma" merge="false" mode="fullcopy" />
+		</emma>
+	</target>
+	
 
-	<target name="test" depends="compile">
+	<target name="test" depends="03-Instrumentation">
 		<junit fork="yes" forkmode="once" printsummary="true" showoutput="true" 
 			failureproperty="failed-test" haltonfailure="false">
-
+		
+			<classpath>
+				<pathelement location="${emma.bin.dir}" />
+				<pathelement location="${emma.bin.dir}" />
+				<path refid="project.classpath" />
+			</classpath>
 			<formatter type="plain" usefile="false" />
-
-			<classpath location="${teste}" />
-			<classpath refid="project.classpath" />
-
+			
 			<batchtest fork="yes" todir="${report}">
-				<fileset dir="${teste}">
+				<fileset dir="${emma.bin.dir}/classes">
 					<include name="**/*Teste.class" />
 				</fileset>
 			</batchtest>
+			
+			<jvmarg value="-Demma.coverage.out.file=${emma.metadate.dir}/cobertura.emma" />
+			<jvmarg value="-Demma.coverage.out.merge=true" />
+			
 		</junit>
+	</target>
+	
+	<!-- Creates the report -->
+	<target name="00-GenerateReport" depends="test">
+	    <mkdir dir="${emma.report.dir}"/>
+	    <emma enabled="true">
+	        <report sourcepath="${src}" sort="+block,+name,+method,+class" metrics="method:70,block:80,line:80,class:100">
+	            <fileset dir="${emma.metadate.dir}">
+	                <include name="*.emma" />
+	            </fileset>
+	            <html outfile="${emma.report.dir}/report.html" depth="method" columns="name,class,method,block,line" />
+	        </report>
+	    </emma>
+		
+		<antcall target="05-DeleteOldReportData" />
+	</target>
+	
+	<!-- Delete Old Report Data -->
+	<target name="05-DeleteOldReportData">
+	    <delete dir="${emma.bin.dir}" />
+	    <delete dir="${emma.metadate.dir}" />
 	</target>
 
 </project>

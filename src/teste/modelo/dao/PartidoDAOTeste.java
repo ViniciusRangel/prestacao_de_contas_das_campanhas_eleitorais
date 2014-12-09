@@ -9,9 +9,9 @@ import modelo.dao.PartidoDAO;
 import org.junit.Assert;
 import org.junit.Test;
 
-import teste.TemplateTeste;
+import teste.Template;
 
-public class PartidoDAOTeste extends TemplateTeste {
+public class PartidoDAOTeste extends Template {
 
 	private PartidoDAO partidoDAO;
 

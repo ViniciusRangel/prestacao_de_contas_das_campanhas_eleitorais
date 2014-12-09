@@ -2,14 +2,15 @@ package teste;
 
 import modelo.beans.Partido;
 import modelo.beans.Candidato;
+
 import org.junit.Test;
+
 import controle.excecao.PartidoExcecao;
 import controle.validacao.PartidoValidacao;
 
-public class PartidoValidacaoTeste extends TemplateTeste {
+public class PartidoValidacaoTeste extends Template {
 	
 	private PartidoValidacao partidoValidacao;
-	private PartidoExcecao partidoExcecao;
 	private Partido partido;
 	private Candidato candidato;
 	
@@ -17,7 +18,6 @@ public class PartidoValidacaoTeste extends TemplateTeste {
 	public void beforeTest() throws Exception {
 		
 		this.partidoValidacao = new PartidoValidacao();
-		this.partidoExcecao = new PartidoExcecao();
 		this.partido = new Partido();
 		this.candidato = new Candidato();
 	}

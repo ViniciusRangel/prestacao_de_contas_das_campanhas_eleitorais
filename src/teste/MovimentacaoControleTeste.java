@@ -17,7 +17,7 @@ import org.junit.Test;
 
 import controle.MovimentacaoControle;
 
-public class MovimentacaoControleTeste extends TemplateTeste {
+public class MovimentacaoControleTeste extends Template {
 
 	private DespesaDAO despesaDAO;
 	private ReceitaDAO receitaDAO;

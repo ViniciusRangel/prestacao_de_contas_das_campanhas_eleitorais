@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.junit.Test;
 
-import teste.TemplateTeste;
+import teste.Template;
 import controle.servlet.RequisitarPartido;
 
-public class RequisitarPartidoTeste extends TemplateTeste {
+public class RequisitarPartidoTeste extends Template {
 	
 	RequisitarPartido requisitarPartido;
 	HttpServletRequest req;

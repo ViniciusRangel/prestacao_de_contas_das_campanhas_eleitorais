@@ -1,7 +1,7 @@
 package teste.modelo.bean;
 
-import static teste.modelo.bean.BeanTeste.instanciarCandidato;
-import static teste.modelo.bean.BeanTeste.instanciarPartido;
+import static teste.modelo.bean.Bean.instanciarCandidato;
+import static teste.modelo.bean.Bean.instanciarPartido;
 import modelo.beans.Candidato;
 import modelo.beans.Partido;
 
@@ -23,7 +23,7 @@ public class CandidatoTeste {
 		
 		Candidato candidato = instanciarCandidato();
 		Candidato candidato2 = instanciarCandidato();
-		candidato2.setTituloEleitoral(BeanTeste.STRING_TESTE_2);
+		candidato2.setTituloEleitoral(Bean.STRING_TESTE_2);
 		Assert.assertFalse(candidato.equals(candidato2));
 	}
 	
@@ -35,11 +35,11 @@ public class CandidatoTeste {
 		Assert.assertFalse(candidato.equals(partido));
 		Assert.assertFalse(partido.equals(candidato));
 		
-		Assert.assertEquals(BeanTeste.STRING_TESTE,candidato.getNome());
+		Assert.assertEquals(Bean.STRING_TESTE,candidato.getNome());
 		
-		Assert.assertEquals(BeanTeste.STRING_TESTE,partido.getSigla());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,partido.getDeferimento());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,partido.getNome());
+		Assert.assertEquals(Bean.STRING_TESTE,partido.getSigla());
+		Assert.assertEquals(Bean.STRING_TESTE,partido.getDeferimento());
+		Assert.assertEquals(Bean.STRING_TESTE,partido.getNome());
 	}
 
 }

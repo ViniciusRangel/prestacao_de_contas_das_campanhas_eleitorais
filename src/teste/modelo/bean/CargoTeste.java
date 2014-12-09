@@ -1,7 +1,7 @@
 package teste.modelo.bean;
 
-import static teste.modelo.bean.BeanTeste.instanciarCargo;
-import static teste.modelo.bean.BeanTeste.instanciarFornecedor;
+import static teste.modelo.bean.Bean.instanciarCargo;
+import static teste.modelo.bean.Bean.instanciarFornecedor;
 import modelo.beans.Cargo;
 import modelo.beans.Fornecedor;
 
@@ -23,7 +23,7 @@ public class CargoTeste {
 		
 		Cargo cargo = instanciarCargo();
 		Cargo cargo2 = instanciarCargo();
-		cargo2.setDescricao(BeanTeste.STRING_TESTE_2);
+		cargo2.setDescricao(Bean.STRING_TESTE_2);
 		Assert.assertFalse(cargo.equals(cargo2));
 	}
 	
@@ -35,10 +35,10 @@ public class CargoTeste {
 		
 		Assert.assertFalse(cargo.equals(fornecedor));
 		Assert.assertFalse(fornecedor.equals(cargo));
-		Assert.assertEquals(BeanTeste.INT_TESTE,cargo.getCodigo());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,fornecedor.getNome());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,fornecedor.getUf());
-		Assert.assertEquals(BeanTeste.STRING_TESTE,fornecedor.getSituacaoCadastral());
+		Assert.assertEquals(Bean.INT_TESTE,cargo.getCodigo());
+		Assert.assertEquals(Bean.STRING_TESTE,fornecedor.getNome());
+		Assert.assertEquals(Bean.STRING_TESTE,fornecedor.getUf());
+		Assert.assertEquals(Bean.STRING_TESTE,fornecedor.getSituacaoCadastral());
 	}
 
 }

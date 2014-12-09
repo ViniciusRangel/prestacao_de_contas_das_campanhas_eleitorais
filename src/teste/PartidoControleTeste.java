@@ -13,7 +13,7 @@ import org.junit.Test;
 import parse.ParseException;
 import controle.PartidoControle;
 
-public class PartidoControleTeste extends TemplateTeste {
+public class PartidoControleTeste extends Template {
 	
 	private PartidoDAO partidoDAO;
 	private PartidoControle partidoControle;

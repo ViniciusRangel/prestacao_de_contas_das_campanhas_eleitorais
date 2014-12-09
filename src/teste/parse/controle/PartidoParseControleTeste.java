@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import parse.controle.PartidoParseControle;
 import parse.indices.PartidoIndicesParse;
-import teste.TemplateTeste;
+import teste.Template;
 
-public class PartidoParseControleTeste extends TemplateTeste {
+public class PartidoParseControleTeste extends Template {
 	
 	public static final int SIGLA = 0;
 	public static final int NUMERO = 1;
