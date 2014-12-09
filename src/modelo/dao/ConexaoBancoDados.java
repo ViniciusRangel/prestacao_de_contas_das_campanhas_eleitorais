@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class ConexaoBancoDados {
 	
 	private static String localBanco = "jdbc:mysql://";	
-	private static String nomeSevidor = "localhost";
+	private static String nomeSevidor = "104.236.48.247:3306";
 	private static String nomeBanco = "c_on";
 	private static String usuario = "root";
 	private static String senha = "root";
